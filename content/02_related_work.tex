@@ -49,7 +49,7 @@ The most popular algorithm for community structure detection was proposed by Gir
 	\item Repeat from step 2 until no edges remain.
 \end{enumerate}
 
-\subsection{Modularity Maximization (Quality Function)}\label{subsec:modularity_maximization}
+\subsection{Modularity Maximization (Quality Function)}
 Algorithms for community detection are supposed to identify \textit{good} partitions. The question remains, what is a good clustering? In order to distinguish between a ``good" and ``bad" clustering, it would be useful to require that partitions satisfy a set of basic properties. In \cite{ref-14}, J. Kleinberg proved an \textit{impossibility theorem} in the field of data clustering.
 
 Given a set $S$ of points, a \textit{distance function} $d$ is defined, which is positive definite and symmetric (the triangular inequality is not explicitly required). One wishes to find a \textit{clustering} $f$ based on the distances between the points. Kleinberg showed that \textbf{no clustering} can satisfy the following three properties at the same time.
@@ -366,7 +366,7 @@ which can clearly be calculated in constant time. There is a maximum of $n - 1$ 
 
 % ================================================================================================== %
 
-\subsection{Modularity Maximization Technique}
+\subsection{Modularity Maximization Technique}\label{subsec:modularity_maximization}
 A \textit{quality function} is a function that assigns a number to each partition of a graph. In this way, one can rank partitions based on their score given by the quality function. Partition with high scores are marked as ``good", so the one with largest score is by definition the best. Nevertheless, one should keep in mind that the question is when a partition is better than another one is ill-posed, and the answer depends on the specific concept of community and/or quality function adopted.
 
 A quality function $Q$ is additive if there is an elementary function $q$ such that, for any partition $\mathcal{P}$ of a graph
